@@ -1,0 +1,151 @@
+/* -------------------------------------------------------------------------------------
+/*
+/* Stylesheet.
+*/
+
+/* -------------------------------------------------------------------------------------
+/* Top of page with logo and navigation */
+
+/* Top navigation menu */
+div#top nav {
+display: block;
+padding: 0.2em 1em 0 1em;
+background: #e3e3df;
+border-bottom: 2px solid #999999;
+}
+div#top nav a {
+padding: 0.3em 1em 0 1em;
+color: #555555;
+font-family: Tahoma, Geneva, sans-serif;
+text-decoration:none;
+}
+div#top nav a:link { }
+div#top nav a:visited { }
+div#top nav a:hover {
+color: #111111;
+background: #999999;
+}
+div#top nav a:active { }
+
+
+/* -------------------------------------------------------------------------------------
+/* Style for all body elements that may inherit */
+body {
+font-family: Georgia, serif;
+color: #333333;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for main content of the page */
+div.wrap {
+width: 950px;
+}
+
+section {
+display: block;
+}
+
+section.content {
+padding: 0 1em 2em 1em;
+width: 600px;
+}
+
+section.columns2 {
+-moz-column-count: 2;
+column-count: 2;
+}
+
+aside {
+display: block;
+}
+
+aside.right {
+float: right;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for figure/pictures */
+figure {
+display: block;
+}
+
+figure figcaption {
+display: block;
+}
+
+figure.standard {
+padding: 5px;
+border: 4px ridge #999999;
+}
+
+figure.standard figcaption {
+text-align: center;
+font-style: italic;
+font-size: 0.8em;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for byline & signature */
+
+div.byline {
+border-top: 1px dashed #999999;
+padding: 1em;
+color: #999999;
+}
+
+div.byline figure {
+float: right;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for paragraphs */
+p {
+/* inherits font and color from body */
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for headers */
+h1,h2,h3,h4,h5,h6 {
+/* inherits font and color from body */
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for the footer and related footer elements */
+footer {
+display: block;
+padding: 0 1em 1em 1em;
+border-top: 1px solid #999999;
+background: #e3e3df;
+color: #999999;
+}
+
+/* Link-lists in the footer */
+footer nav {
+float: left;
+width: 8em;
+margin-bottom: 2em;
+}
+
+footer nav h5 {
+margin-bottom: 0.5em;
+}
+
+footer nav a {
+display: list-item;
+list-style: none;
+color: inherit;
+font: 0.8em Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+footer nav a:link { }
+footer nav a:visited { }
+footer nav a:hover { text-decoration:underline; color: #333333; background: none;}
+footer nav a:active { }
+
+/* Final message in the footer */
+footer div.final {
+clear: both;
+padding-left: 50px;
+background: url(../img/me.png) no-repeat;
+font-size: 0.8em;
+}

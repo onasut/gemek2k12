@@ -1,0 +1,245 @@
+/* -------------------------------------------------------------------------------------
+/*
+/* Stylesheet.
+*/
+
+/* -------------------------------------------------------------------------------------
+/* Style for all body elements that may inherit */
+body {
+margin: 0px;
+padding: 0px;
+font-family: MS Sans Serif, Georgia, serif ;
+color: #555555;
+background-color: #FADADD; /*#EDF5FC;*/
+}
+
+/* -------------------------------------------------------------------------------------
+/* Top of page with logo and navigation */
+
+img#logo { border: 0; }
+
+header#top nav {
+display: block;
+padding: 0.2em 1em 0.2em 1em;
+background: #CD919E; /*#a2bbaa;*/
+border-bottom: 15px solid #1f9544;
+}
+header#top nav a {
+padding: 0.3em 1em 0.2 1em;
+color: #555555;
+font-family: Tahoma, Geneva, sans-serif;
+text-decoration:none;
+}
+header#top nav a:link { }
+header#top nav a:visited { }
+header#top nav a:hover { color: #111111; background: #FADADD; }
+header#top nav a:active { }
+
+/* Keep current choice/link highlighted */
+body#insert_account a#insert_account- { color:#eeeeee; background:#8B636C; }
+body#rullist a#rullist- { color:#eeeeee; background:#8B636C; }
+body#search a#search- { color:#eeeeee; background:#8B636C; }
+body#client a#client- { color:#eeeeee; background:#8B636C; }
+body#account_plan a#account_plan- { color:#eeeeee; background:#8B636C; }
+body#insert_kb_log a#insert_kb_log- { color:#eeeeee; background:#8B636C; }
+
+/* -------------------------------------------------------------------------------------
+/* Style for main content of the page */
+div#wrap {
+width: 950px;
+padding: 0px 0px 0px 16px;
+}
+
+article {
+display: block;
+width: 600px;
+padding-bottom:1em;
+}
+
+header { display: block; }
+section { display: block; }
+
+
+/* Style for tables */
+
+table {
+	border-width: 0px;
+}
+
+table.input { 
+	border-width: 0px;
+	border-color: red;
+}
+
+table.output {
+	border-width: 0px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: blue;
+	border-collapse: separate;
+
+}
+table.output th {
+	border-width: 1px;
+	padding: 1px;
+	border-style: outset;
+	border-color: gray;
+	-moz-border-radius: ;
+}
+table.output td {
+	border-width: 1px;
+	padding: 1px;
+	border-style: outset;
+	border-color: gray;
+	-moz-border-radius: ;
+}
+
+
+
+
+/* -------------------------------------------------------------------------------------
+/* Style for aside elements */
+aside {
+display: block;
+}
+
+aside.right {
+float: right;
+}
+
+aside.box {
+width: 250px;
+margin: 0 0 1em 0;
+padding: 0 1em 0 1em;
+border: 3px dashed #e3e3df;
+border-top: 3px solid #999999;
+border-right: 3px solid #999999;
+}
+aside.box p { font-size: smaller; }
+
+/* -------------------------------------------------------------------------------------
+/* Style for figure/pictures */
+figure {
+display: block;
+}
+
+figure figcaption {
+display: block;
+}
+
+figure.standard {
+padding: 5px;
+border: 4px ridge #999999;
+}
+
+figure.standard figcaption {
+text-align: center;
+font-style: italic;
+font-size: 0.8em;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for displaying code */
+blockquote.code {
+font-family: monospace;
+white-space: pre;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for byline & signature */
+
+footer.byline {
+display:block;
+border-top: 1px dashed #999999;
+margin-top:2em;
+padding: 1em;
+color: #999999;
+}
+
+footer.byline img {
+float: right;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for headers */
+h1,h2,h3,h4,h5,h6 {
+/* inherits font and color from body */
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for paragraphs */
+p {
+/* inherits font and color from body */
+}
+
+p.byline {
+font-style: italic;
+font-size:smaller;
+}
+
+p.ingress { }
+
+p.go-to-start {
+font-size: smaller;
+font-style: italic;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for a links */
+a {
+color: inherit;
+}
+a:link { }
+a:visited { }
+a:hover { text-decoration: none; color: #333333; background: #e3e3df;}
+a:active { }
+
+/* Subtle links */
+p a:link.subtle { text-decoration:none; color: #333333; }
+p a:visited.subtle { text-decoration:none; color: #333333; }
+p a:hover.subtle { text-decoration:underline; color: #333333; background: #e3e3df; }
+p a:active.subtle {}
+
+/* -------------------------------------------------------------------------------------
+/* Style for the footer and related footer elements */
+footer#bottom {
+display: block;
+padding: 0 1em 1em 1em;
+border-top: 3px solid #8B636C;
+background: #CD919E;
+color: #777777;
+}
+
+/* Link-lists in the footer */
+/*
+footer#bottom nav {
+float: left;
+padding-left:0.3em;
+width: 8em;
+margin-bottom: 2em;
+}
+
+footer#bottom nav h5 {
+margin-bottom: 0.5em;
+}
+
+footer#bottom nav a {
+display: list-item;
+list-style: none;
+color: inherit;
+font: 0.8em Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+footer#bottom nav a:link { }
+footer#bottom nav a:visited { }
+footer#bottom nav a:hover { text-decoration:underline; color: #333333; background: none;}
+footer#bottom nav a:active { }
+*/
+
+/* Final message in the footer */
+footer#bottom div.final {
+clear: both;
+padding-left: 5px;
+/* background: url(../img/me.png) no-repeat; */
+font-size: 0.8em;
+}

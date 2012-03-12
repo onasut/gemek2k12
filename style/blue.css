@@ -1,0 +1,27 @@
+body 
+        {
+            font-family: MS Sans Serif;
+            background-color: #EDF5FC;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        td
+        {
+            font-family: MS Sans Serif;
+            font-size: 80%;
+        }
+
+        .valueLabel 
+        {
+            color: #555555;
+        }
+
+        .valueField 
+        {
+            height: 16px;
+            background-color: white;
+            padding: 2px;
+            padding-right: 20px;
+            border: solid 1px #E3EFFF;
+        }
