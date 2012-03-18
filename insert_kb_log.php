@@ -2,7 +2,6 @@
 $title = "Bokföring";
 $bodyId = "insert_kb_log"; 
 include("header.php");
-require_once('config.php');
 ?>
 
 <div id="wrap">
@@ -36,7 +35,7 @@ $result = $mysqli->query($query)
 $i = 1; 
 echo '<option value="">Välj kontokod</options>';
 while($row = $result->fetch_object()) { 
-        echo '<option value="' . $row->id . '">' . $row->denom . '</option>'; 
+        echo '<option value="' . $row->id . '">' . $row->id . ' ' . $row->denom . '</option>'; 
         $i++; 
     } 
 

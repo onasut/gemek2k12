@@ -14,9 +14,23 @@
     
     <!-- Stylesheets -->
 <?php
-	//Egen stylesheet för Nene.
-	if ($_SERVER['REMOTE_ADDR'] == '192.168.0.199') {$style = 'nene';} else {$style = 'stylesheet';}
-	echo '<link rel="stylesheet" media="all" href="style/' . $style . '.css" title="Default" type="text/css">';
+	require_once('config.php');
+	// Utseende utifrån vem som besöker sidan
+	switch ($_SERVER['REMOTE_ADDR']) {
+		case JohansIP:
+			$style = 'stylesheet';
+			break;
+		case HelenesIP:
+			$style = 'nene';
+			break;
+		case localhost:
+			$style = 'stylesheet';
+			break;
+		default:
+			$style = 'stylesheet';
+	}
+	echo '    <link rel="stylesheet" media="all" href="style/' . $style . '.css" title="Default" type="text/css">
+';
 ?>
     <link rel="stylesheet" media="print" href="style/print.css" type="text/css"> 
     <link rel="alternative stylesheet" href="style/dv1401_kmom01.css" title="Exempel från DV1401 Kmom01" type="text/css">
@@ -43,8 +57,7 @@
                 -->
 				<nav>
                         <a id="insert_kb_log-" href="insert_kb_log.php">Bokför</a>
-						<a id="account_plan-" href="account_plan.php">Kontoplan</a>
-                        <a id="insert_account-" href="insert_account.php">Ny kontokod</a>
-                        <a id="search-" href="search_thebook.php">TestSökning</a>             
+						<a id="search-" href="search_thebook.php">Sök</a>
+						<a id="account_plan-" href="account_plan.php">Kontoplan</a>              
                 </nav>
         </header>

@@ -2,7 +2,7 @@
 $title = "Sökning";
 $bodyId = "search";
 include("header.php");
-require_once('config.php');  
+//require_once('config.php');  //görs i header
 ?>
 
 <div id="wrap">
@@ -33,8 +33,7 @@ require_once('config.php');
 
 </fieldset> 
 </form> 
-</article>
-</div> <!-- wrapper -->
+
 
 
 <?php 
@@ -72,35 +71,48 @@ if(empty($search)) {
     goto footer; 
 } 
 
-$query = "SELECT * FROM keepbook WHERE date LIKE '{$search}%';"; 
+$query = "SELECT kb.account_id,a.denom,kb.amount,p.name,kb.date,kb.comment 
+		FROM keepbook as kb
+		JOIN persons as p on (p.id = kb.person_id) 
+		JOIN accounts as a on (a.id = kb.account_id)
+		WHERE date LIKE '{$search}%'
+		ORDER BY kb.date  ;";
 
 
 // Execute query 
 $res = $mysqli->query($query)  
                     or die("Could not query database, query =<br/><pre>{$query}</pre><br/>{$mysqli->error}"); 
 
-echo "<p>Query={$query}</p><p>Number of rows in resultset: " . $res->num_rows . "</p>"; 
+//echo "<p>Query={$query}</p><p>Number of rows in resultset: " . $res->num_rows . "</p>"; 
 
 
 // Show the results of the query 
-
+echo '<table class="output">';
+echo '<tr><th>Konto</th>
+	<th>Belopp</th>
+	<th>Person</th>
+	<th>Datum</th>
+	<th>Notis</th></tr>';
 $i = 1; 
 while($row = $res->fetch_object()) { 
-        echo $i . ": " . $row->amount . " - " . $row->person_id . " - " . $row->account_id . " - " . $row->timestamp . "<br/>"; 
-        $i++; 
+        echo '<tr><td>' . $row->account_id . ' ' . $row->denom 
+		. '</td><td>' . $row->amount
+		. '</td><td>' . $row->name
+		. '</td><td>' . $row->date
+		. '</td><td>' . $row->comment
+		. '</td></tr>';
+		
+		$i++; 
     } 
+echo '</table>';
 
 $res->close(); 
 
-
-// Close the connection to the database 
-
 $mysqli->close(); 
-
-
-//goto footer; 
-
 ?> 
+
+</article>
+</div> <!-- wrapper -->
 
 <?php 
 footer:
