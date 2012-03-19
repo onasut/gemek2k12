@@ -1,5 +1,5 @@
 ﻿<?php
-$title = "Bokföring";
+$title = "Bokför";
 $bodyId = "insert_kb_log"; 
 include("header.php");
 ?>

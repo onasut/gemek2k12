@@ -1,5 +1,5 @@
 ﻿<?php
-$title = "Lägg till kontokod";
+$title = "Kontoplan";
 $bodyId = "account_plan";
 include("header.php");
 //require_once('config.php'); //görs i header
@@ -24,7 +24,7 @@ $result = $mysqli->query($query)
 echo '<table class="output">';
 echo '<tr><th width=120px>Kontokod</th>
 	<th width=40%>Kontonamn</th>
-	<th width=200px>Alternativ</th></tr>';
+	<th width=200px>Egenskaper</th></tr>';
 $i = 1; 
 while($row = $result->fetch_object()) { 
 		if($row->mutual){$mutual='Gemensam';}else{$mutual='Enskild';}

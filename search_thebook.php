@@ -1,5 +1,5 @@
 ﻿<?php
-$title = "Sökning";
+$title = "Sök";
 $bodyId = "search";
 include("header.php");
 //require_once('config.php');  //görs i header
